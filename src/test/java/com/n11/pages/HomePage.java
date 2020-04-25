@@ -27,11 +27,10 @@ public class HomePage extends Base {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        waitUntilClickable(closeBtn).click();
     }
 
     public void getSignInPage() {
+        waitUntilClickable(closeBtn).click();
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {

@@ -1,11 +1,24 @@
 package com.n11.steps;
 
 import com.n11.core.TestBase;
+import com.n11.pages.LoggedHomePage;
+import com.n11.pages.ProductPage;
+import com.n11.pages.SearchPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class SearchSteps extends TestBase {
+
+    private LoggedHomePage loggedHomePage;
+    private SearchPage searchPage;
+    private ProductPage productPage;
+
+    public SearchSteps() {
+        this.loggedHomePage = new LoggedHomePage(driver);
+        this.searchPage = new SearchPage(driver);
+        this.productPage = new ProductPage(driver);
+    }
 
     @When("Customer search with {string} word")
     public void customer_search_with_word(String value) {

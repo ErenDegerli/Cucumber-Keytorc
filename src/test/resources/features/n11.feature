@@ -1,4 +1,4 @@
-Feature: Keytorc Assignment
+Feature: n11 Test
 
   Scenario: User should be signed in
     Given Visitor is on the HomePage
