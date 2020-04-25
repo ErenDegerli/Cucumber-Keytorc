@@ -6,8 +6,6 @@ import com.n11.pages.SearchPage;
 import com.n11.pages.WishListPage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Assert;
 
 public class MyFavoriteSteps extends TestBase {
@@ -26,7 +24,7 @@ public class MyFavoriteSteps extends TestBase {
     public void customerShouldSeeProductOnFavoriteList() {
         searchPage.goToMyWishPage();
         wishListPage.goToFavourites();
-        Assert.assertEquals(thirdProductName,favouritesPage.getFavouriteProductName());
+        Assert.assertEquals(thirdProductName, favouritesPage.getFavouriteProductName());
     }
 
     @When("Customer should remove added favorite product from Favorite List")
@@ -36,7 +34,7 @@ public class MyFavoriteSteps extends TestBase {
 
     @Then("Customer should see {string} success message and removed favorite product from Favorite List")
     public void customer_should_see_success_message_and_removed_favorite_product_from_Favorite_List(String message) {
-        Assert.assertEquals( message, favouritesPage.getMessage());
+        Assert.assertEquals(message, favouritesPage.getMessage());
         favouritesPage.closeMessageField();
         Assert.assertTrue(wishListPage.getFavouritesTitle().contains("0"));
         tearDown();

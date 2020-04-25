@@ -8,7 +8,7 @@ public class Base extends PageBase {
 
     public Base(WebDriver driver) {
         super(driver);
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
         driver.manage().window().maximize();
     }
 }

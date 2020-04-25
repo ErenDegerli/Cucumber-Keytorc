@@ -24,13 +24,13 @@ public class LoginSteps extends TestBase {
     }
 
     @When("Customer login with {string} email and {string} password")
-    public void customer_login_with_email_and_password(String email, String password){
+    public void customer_login_with_email_and_password(String email, String password) {
         homePage.getSignInPage();
-        signInPage.getLogIn(email,password);
+        signInPage.getLogIn(email, password);
     }
 
     @Then("Customer should see page title as {string} on Home Page")
     public void customer_should_see_page_title_as_on_Home_Page(String title) {
-        Assert.assertEquals(title,homePage.getPageTitle());
+        Assert.assertEquals(title, homePage.getPageTitle());
     }
 }

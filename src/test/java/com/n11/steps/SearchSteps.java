@@ -38,7 +38,7 @@ public class SearchSteps extends TestBase {
 
     @Then("Customer should see the exact product")
     public void customer_should_see_the_exact_product() {
-        Assert.assertEquals(secondProductName,productPage.getTitleOfOpenedProduct());
+        Assert.assertEquals(secondProductName, productPage.getTitleOfOpenedProduct());
     }
 
     @When("Customer should add to favorite 3rd product")

@@ -12,7 +12,7 @@ public class SearchPage extends Base {
     @FindBy(xpath = "//*[@id='view']/ul/li[2]/div/div[1]/a")
     private WebElement secondProduct;
 
-    @FindBy(xpath = "//*[@id='view']/ul/li[3]/div/div[1]/a/h3" )
+    @FindBy(xpath = "//*[@id='view']/ul/li[3]/div/div[1]/a/h3")
     private WebElement thirdProduct;
 
     @FindBy(xpath = "//*[@id='view']/ul/li[3]/div/div[1]/span")
@@ -52,7 +52,7 @@ public class SearchPage extends Base {
     }
 
     public void goToMyWishPage() {
-        js.executeScript("arguments[0].scrollIntoView(true);",myAccount);
+        js.executeScript("arguments[0].scrollIntoView(true);", myAccount);
         mouseOver(myAccount);
         waitUntilClickable(myFavoriteButton).click();
     }
