@@ -29,8 +29,8 @@ public class LoginSteps extends TestBase {
         signInPage.getLogIn(email, password);
     }
 
-    @Then("Customer should see page title as {string} on Home Page")
-    public void customer_should_see_page_title_as_on_Home_Page(String title) {
+    @Then("Customer should see the page title as {string} on HomePage")
+    public void customer_should_see_the_page_title_as_on_HomePage(String title) {
         Assert.assertEquals(title, homePage.getPageTitle());
     }
 }

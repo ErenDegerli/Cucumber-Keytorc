@@ -41,8 +41,8 @@ public class SearchSteps extends TestBase {
         Assert.assertEquals(secondProductName, productPage.getTitleOfOpenedProduct());
     }
 
-    @When("Customer should add to favorite 3rd product")
-    public void customer_should_add_to_favorite_3rd_product() {
+    @When("Customer should add to favourite 3rd product")
+    public void customer_should_add_to_favourite_3rd_product() {
         productPage.goBackToSearchPage();
         thirdProductName = searchPage.getThirdProductTitle();
         searchPage.getThirdItemToFavouriteList();
