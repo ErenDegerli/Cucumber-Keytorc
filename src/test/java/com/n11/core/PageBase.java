@@ -32,7 +32,6 @@ public abstract class PageBase {
     }
 
     public void mouseOver(WebElement webElement) {
-        actions = new Actions(driver);
         actions.moveToElement(webElement).perform();
     }
 }
