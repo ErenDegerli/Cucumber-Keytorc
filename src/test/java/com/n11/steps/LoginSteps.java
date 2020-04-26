@@ -24,7 +24,7 @@ public class LoginSteps extends TestBase {
     }
 
     @When("Customer login with {string} email and {string} password")
-    public void customer_login_with_email_and_password(String email, String password) {
+    public void customer_login_with_email_and_password(String email, String password) throws InterruptedException {
         homePage.getSignInPage();
         signInPage.getLogIn(email, password);
     }

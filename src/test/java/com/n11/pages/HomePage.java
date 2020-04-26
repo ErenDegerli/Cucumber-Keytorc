@@ -30,13 +30,9 @@ public class HomePage extends Base {
         }
     }
 
-    public void getSignInPage() {
+    public void getSignInPage() throws InterruptedException {
         waitUntilClickable(closeBtn).click();
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Thread.sleep(1000);
         waitUntilClickable(signInBtn).click();
     }
 

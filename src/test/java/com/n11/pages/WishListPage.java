@@ -23,12 +23,8 @@ public class WishListPage extends Base {
         waitUntilVisible(myFavourites).click();
     }
 
-    public String getFavouritesTitle() {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    public String getFavouritesTitle() throws InterruptedException {
+        Thread.sleep(1000);
         waitUntilClickable(favourites).click();
         return waitUntilVisible(favouritesTitle).getText();
     }

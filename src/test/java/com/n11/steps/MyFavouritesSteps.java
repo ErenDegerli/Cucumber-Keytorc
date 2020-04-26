@@ -40,7 +40,7 @@ public class MyFavouritesSteps extends TestBase {
 
     }
     @And("Customer should see the product is removed from Favourite List")
-    public void customer_should_see_the_product_is_removed_from_Favourite_List() {
+    public void customer_should_see_the_product_is_removed_from_Favourite_List() throws InterruptedException {
         Assert.assertTrue(wishListPage.getFavouritesTitle().contains("0"));
         tearDown();
     }
